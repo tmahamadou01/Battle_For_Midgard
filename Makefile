@@ -5,37 +5,32 @@
 ## Login   <maxim_e@etna-alternance.net>
 ## 
 ## Started on  Mon Apr 10 19:31:37 2017 MAXIM Elena 
-## Last update Thu May 11 10:47:46 2017 MAXIM Elena 
+## Last update Thu May 11 16:57:37 2017 TRAORE Mahamadou
 ##
 
-CC	=       gcc
+CC	= gcc
+CFLAGS	= -Wall -Wextra -Werror
+NAME	= sta
+SRC	= main.c 		\
+          getCreature.c		\
+          readline.c 		\
+          my_string.c		
 
-NAME	=       sta
+OBJS	= $(SRC:.c=.o)
 
-SRC	=       main.c	        \
-                getCreature.c	\
-                readline.c	\
-                introduction.c	\
-                battle.c	\
-                final.c         \
+RM  	= rm -f 
 
-OBJ     =       $(SRC: .c = .o)
+all     :	$(NAME)
 
-RM  =           rm -f 
+$(NAME) :	$(OBJS)
+		$(CC) $(OBJS) -o $(NAME) $(CFLAGS)
 
-CFLAGS  =       -W -Wall -Wextra -Werror
+clean   :
+		$(RM) $(OBJS)
 
-
-$NAME:		$(OBJ)
-		$(CC) $(OBJ) -o $(NAME) $(CFLAGS)
-all:		$(NAME)
-
-clean:
-		$(RM) $(OBJ)
-
-fclean:		clean
+fclean  :	clean
 		$(RM) $(NAME)
 
-.PHONY:		fclean all
+re      :	fclean all
 
-re:		fclean all
+.PHONY  :	all clean fclean re
