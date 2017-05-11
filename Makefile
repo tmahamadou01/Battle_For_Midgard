@@ -14,7 +14,8 @@ NAME	= sta
 SRC	= main.c 		\
           getCreature.c		\
           readline.c 		\
-          my_string.c		
+          my_string.c		\
+          midgard.c
 
 OBJS	= $(SRC:.c=.o)
 
