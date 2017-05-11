@@ -5,7 +5,7 @@
 ## Login   <maxim_e@etna-alternance.net>
 ## 
 ## Started on  Mon Apr 10 19:31:37 2017 MAXIM Elena 
-## Last update Thu May 11 16:57:37 2017 TRAORE Mahamadou
+## Last update Thu May 11 17:34:54 2017 TRAORE Mahamadou
 ##
 
 CC	= gcc
@@ -14,7 +14,8 @@ NAME	= sta
 SRC	= main.c 		\
           getCreature.c		\
           readline.c 		\
-          my_string.c		
+          my_string.c		\
+	  display.c
 
 OBJS	= $(SRC:.c=.o)
 

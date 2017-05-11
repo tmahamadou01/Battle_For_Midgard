@@ -5,7 +5,7 @@
 ** Login   <traore_m@etna-alternance.net>
 ** 
 ** Started on  Thu May 11 10:02:00 2017 TRAORE Mahamadou
-** Last update Thu May 11 17:00:42 2017 TRAORE Mahamadou
+** Last update Thu May 11 17:32:46 2017 TRAORE Mahamadou
 */
 
 /** Declaration des structures  **/
@@ -38,4 +38,5 @@ int			my_strcmp(const char *s1, const char *s2);
 char			*my_strdup(const char *str);
 char			*readLine();
 void			my_putstr_color(const char *color, const char *str);
+void			display_name(char *name);
 #endif
